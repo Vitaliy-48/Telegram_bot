@@ -1,8 +1,10 @@
 import telebot
-from configbot import MY_BOT_TOKEN
 from telebot import types
+from dotenv import load_dotenv
+import os
 
-
+load_dotenv()
+MY_BOT_TOKEN = os.getenv('MY_BOT_TOKEN')
 botFL = telebot.TeleBot(MY_BOT_TOKEN)
 
 
