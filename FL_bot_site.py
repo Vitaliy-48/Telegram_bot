@@ -11,7 +11,7 @@ botFL = telebot.TeleBot(MY_BOT_TOKEN)
 
 @botFL.message_handler(commands=['start'])
 def start(message):
-    botFL.send_message(message, 'Hello')
+    botFL.send_message(message.chat.id, 'Hello')
     botFL.reply_to(message, 'Hello')
 
 
@@ -39,7 +39,7 @@ def response(function_call):
      if function_call.data == "yes":
         second_mess = "Виготовлення формових свічок - це моя справа.\nЩоб побачити  більше переглянь сторінку"
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Перейти на сайт", url="http://127.0.0.1:5000"))
+        markup.add(types.InlineKeyboardButton("Перейти на сайт", url="https://homemadecandle.onrender.com/"))
         botFL.send_message(function_call.message.chat.id, second_mess, reply_markup=markup)
         botFL.answer_callback_query(function_call.id)
 
