@@ -1,0 +1,1 @@
+worker: python firelady_bot.py
