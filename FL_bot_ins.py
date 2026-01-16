@@ -17,7 +17,7 @@ def start(message):
 
 @botFL.message_handler(commands=['photo'])
 def send_photo(message):
-    with open("fire.jpg", "rb") as photo:
+    with open("images/fire.jpg", "rb") as photo:
         botFL.send_photo(message.chat.id, photo, caption="Ось ваше зображення!")
 
 
