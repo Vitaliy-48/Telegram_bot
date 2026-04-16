@@ -1,46 +1,47 @@
 # 🔥 Telegram Bot — Fire Lady
 
-Цей репозиторій містить кілька Telegram-ботів, які презентують хендмейд-свічки, надсилають фото, та ведуть користувача до Instagram або локального сайту.
+This repository contains several Telegram bots that showcase handmade candles, send photos, and guide users to Instagram or a local website.
 
-## 📦 Структура проєкту
-├── .env                  # Зберігає токен бота (MY_BOT_TOKEN) 
-├── .gitignore            # Ігнорує .venv, .env та інші службові файли
-├── fire3_FL_bot.jpg      # Зображення, яке надсилається ботом 
-├── firelady_bot.py       # Основний бот з командою /fire та описом свічок 
-├── FL_bot_ins.py         # Бот з кнопкою переходу в Instagram 
-├── FL_bot_site.py        # Бот з кнопкою переходу на сайт 
-├── Procfile              # Інструкція для Render: як запускати бота
-├── README.md             # Документація проєкту
-├── requirements.txt      # Залежності (створити через pip freeze) 
-└── .venv/                # Віртуальне середовище (ігнорується Git)
+## 📦 Project Structure
+```
+├── .gitignore            # Ignores .venv, .env, and other service files
+├── fire3_FL_bot.jpg      # Image sent by the bot 
+├── firelady_bot.py       # Main bot with /fire command and candle descriptions 
+├── FL_bot_ins.py         # Bot with a button linking to Instagram 
+├── FL_bot_site.py        # Bot with a button linking to the website 
+├── Procfile              # Instructions for Render: how to run the bot
+├── README.md             # Project documentation
+├── requirements.txt      # Dependencies (generated via pip freeze) 
+└── .venv/                # Virtual environment (ignored by Git)
 
+```
 
-## 🚀 Як запустити
+## 🚀 How to Run
 
-1. **Клонувати репозиторій**
+1. **Clone the repository**
    ```bash
    https://github.com/Vitalii-48/Telegram_bot
-2. **Створити віртуальне середовище** 
+2. **Create a virtual environment** 
   python -m venv .venv
   .venv\Scripts\activate  # Windows
-3. **Встановити залежності**
+3. **Install dependencies**
   pip install -r requirements.txt
-4. **Створтит файл .env**
+4. **Create the .env file**
   MY_BOT_TOKEN = "тут_твій_токен"
-5. **Запустити потрібний бот**
+5. **Run the desired bot**
   python firelady_bot.py
 
-## 🧠 Функціонал
-- /fire — надсилає опис формових свічок та кнопки "Так" / "Ні".
-- При натисканні "Так" — надсилає текст з описом і кнопку переходу в Instagram.
-- /photo — надсилає зображення fire3_FL_bot.jpg.
-- Відповідає на будь-яке повідомлення з фото і кнопкою "Так".
-- Переходи: Instagram або сайт HomeMadeCandle(https://homemadecandle.onrender.com/).
+## 🧠 Functionality
+/fire — sends a description of shaped candles and buttons "Yes" / "No".
+When "Yes" is pressed — sends text with description and a button linking to Instagram.
+/photo — sends the image fire3_FL_bot.jpg.
+Responds to any message with a photo and "Yes" button.
+Redirects: Instagram or website HomeMadeCandle.
 
-## ⚙️ Залежності
+## ⚙️ Dependencies
 requirements.txt
-- pyTelegramBotAPI==4.15.4
-- python-dotenv==1.0.1
+pyTelegramBotAPI==4.15.4
+python-dotenv==1.0.1
 
-## 👩‍💻 Авторство
-Проєкт за допомогою штучного інтелекту (Microsoft Copilot).
+## 👩‍💻 Author
+Project developed with the help of Artificial Intelligence (Microsoft Copilot).
